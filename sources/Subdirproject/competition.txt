@@ -1,0 +1,13 @@
+Ivanov I.I. 312 312 321
+Petrov V.B. 444 380 239
+Kozlov K.N. 323 990 234
+Sidorovich A.H. 700 902 492
+Kuznetsov D.L. 865 323 401
+Putin V.V. 3004 4242 4245
+Bereznin A.A. 594 442 689
+Pahomov S.I. 2999 0 0
+Grigorivich G.P. 544 9 234
+Mechenkov K.S. 333 3 3
+Naumenkov I.F. 90 880 353
+Saharov K.I. 390 399 3950
+Lopuhov T.M. 595 445 399
