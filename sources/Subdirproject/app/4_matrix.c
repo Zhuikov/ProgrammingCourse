@@ -14,7 +14,6 @@ int calc_column(int line, int col, int **arr){
     return ans;
 }
 
-/// бессмысленное название
 void matrix(){
 
     FILE *file_in, *file_out;

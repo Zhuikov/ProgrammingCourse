@@ -1,30 +1,31 @@
 #include <iostream>
 #include "matrix.h"
 
-XoGame::XoGame() // код для конструктора
+Matrix::Matrix()
 {
-    std::cout << "Hello constructor" << std::endl;
+    cout << "Constructor" << endl;
 }
-
-void XoGame::helloworld(){
-    std::cout << "Hello method" << std::endl;
+Matrix Matrix::copy(Matrix*)
+{
+    cout << "Copy" << endl;
 }
-
-void XoGame::setMyVar(int var){
-    myVar = var;
+Matrix Matrix::sum(Matrix*)
+{
+    cout << "Sum"  << endl;
 }
-
-int XoGame::getMyVar(){
-    return myVar;
+Matrix Matrix::subtraction(Matrix*)
+{
+    cout << "Subrtaction" << endl;
 }
-
-XoGame::~XoGame(){
-    std::cout << "hello destructor" << std::endl;
+Matrix Matrix::multiplication(Matrix*)
+{
+    cout << "Multiplication" << endl;
 }
-
-//Matrix::Matrix(){}
-
-//Matrix::matrix_copy(int mat1[][], int res[][])
-//{
-
-//}
+Matrix Matrix::multiplication_on_number(int number)
+{
+    cout << "Multiplication on number" << endl;
+}
+Matrix::~Matrix()
+{
+    cout << "Destructor" << endl;
+}

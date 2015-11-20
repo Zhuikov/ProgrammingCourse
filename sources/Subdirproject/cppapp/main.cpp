@@ -5,12 +5,12 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
-    int v = 5;
-    XoGame xoGame;
-    xoGame.helloworld();
-    xoGame.setMyVar(v);
-    cout << xoGame.getMyVar() << endl;
+    Matrix arr, arr2;
+    Matrix.copy(&arr);
+    Matrix.sum(&arr);
+    Matrix.subtraction(&arr);
+    Matrix.multiplication(&arr);
+    Matrix.multiplication_on_number(8);
+
     return 0;
 }
-
