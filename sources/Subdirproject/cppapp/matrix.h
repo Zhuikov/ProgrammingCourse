@@ -4,9 +4,10 @@
 class Matrix
 {
 public:
-    Matrix();
-
-    Matrix copy(Matrix*);
+    Matrix(int n, int m);
+    void set(int, int, int);
+    int get(int, int);
+    Matrix copy();
     Matrix sum(Matrix*);
     Matrix subtraction(Matrix*);
     Matrix multiplication(Matrix*);
@@ -16,6 +17,7 @@ public:
 
 private:
     int ** matrix;
+    int n, m;
 };
 
 #endif // MATRIX_H

@@ -18,7 +18,7 @@ void matrix(){
 
     FILE *file_in, *file_out;
     int m, n, i, j, pre_ans;
-    int* *arr;
+    int ** arr;
 
     file_in = fopen("input.txt", "r");
 

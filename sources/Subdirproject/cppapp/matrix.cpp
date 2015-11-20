@@ -1,11 +1,26 @@
 #include <iostream>
 #include "matrix.h"
 
-Matrix::Matrix()
+using namespace std;
+
+Matrix::Matrix(int n, int m)
 {
+    matrix = new int*[m];
+    for (int i = 0; i < n; ++i){
+        matrix[i] = new int[n];
+    }
+
     cout << "Constructor" << endl;
 }
-Matrix Matrix::copy(Matrix*)
+void Matrix::set(int i, int j, int val)
+{
+    matrix[i][j] = val;
+}
+int Matrix::get(int i, int j)
+{
+    return matrix[i][j];
+}
+Matrix Matrix::copy()
 {
     cout << "Copy" << endl;
 }
@@ -27,5 +42,9 @@ Matrix Matrix::multiplication_on_number(int number)
 }
 Matrix::~Matrix()
 {
+    for (int i = 0; i < m; ++i){
+        delete[]matrix[i];
+    }
+    delete[]matrix;
     cout << "Destructor" << endl;
 }
