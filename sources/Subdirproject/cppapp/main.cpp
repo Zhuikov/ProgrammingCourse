@@ -10,12 +10,16 @@ int main()
     cin >> n;
     cout << "Число столбцов: ";
     cin >> m;
-    Matrix arr(n, m), arr2(n, m);
+    Matrix arr(n, m);
     for (i = 0; i < n; i++)
         for (j = 0; j < m; j++)
             arr.set(i, j, i * j);
     arr.print();
+<<<<<<< HEAD
     arr2 = arr.sum(arr);
+=======
+    Matrix arr2 = arr.copy();
+>>>>>>> e20c5d1fe5350e071d21b769ed393325d8af6063
     arr2.print();
     return 0;
 }
