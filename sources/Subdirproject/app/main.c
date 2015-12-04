@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
             break;
         }
         case 4: {
-            matrix();
+            change_matrix();
             break;            
         } 
         case 5: {

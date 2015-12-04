@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "stringsx.h"
 #include "strings.h"
 
@@ -43,7 +42,6 @@ void results_of_competition(){
              else if (compare_structs(&participant, &third) == 1) {
                       assigment_of_structs(&participant, &third);
                   }
-     // printf("%s %d, %d, %d\n", participant.name, results[0], results[1], results[2]);
     }
 
     fclose(f);

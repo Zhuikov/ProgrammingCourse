@@ -14,7 +14,7 @@ int calc_column(int line, int col, int **arr){
     return ans;
 }
 
-void matrix(){
+void change_matrix(){
 
     FILE *file_in, *file_out;
     int m, n, i, j, pre_ans;

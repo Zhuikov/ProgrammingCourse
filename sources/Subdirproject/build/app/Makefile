@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = 
 CFLAGS        = -m32 -pipe -g -Wall -W -fPIC $(DEFINES)
 CXXFLAGS      = -m32 -pipe -g -std=c++0x -Wall -W -fPIC $(DEFINES)
-INCPATH       = -I../../app -I/home/user/GIT/ProgrammingCourse/sources/Subdirproject/build/app -I../../lib -I../../lib -I../../lib -I../../lib -I../../lib -I../../lib -I../../lib -I/home/user/Qt/5.5/gcc/mkspecs/linux-g++-32
+INCPATH       = -I../../app -I. -I../../lib -I../../lib -I../../lib -I../../lib -I../../lib -I../../lib -I../../lib -I/home/user/Qt/5.5/gcc/mkspecs/linux-g++-32
 QMAKE         = /home/user/Qt/5.5/gcc/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d

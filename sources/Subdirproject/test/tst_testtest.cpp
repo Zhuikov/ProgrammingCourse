@@ -5,7 +5,6 @@
 #include "equation.h"
 
 
-/// Почему не подходит макрос QCOMPARE?
 int length_compare(double a, double res){
 
     if (fabs(a - res) < 10e-5) return 1;
@@ -22,7 +21,6 @@ int struct_equality(struct Solutions_of_equation *f, float arr[4]){
     return 1;
 }
 
-//int equation_compare()
 
 class TestTest : public QObject
 {
@@ -42,7 +40,6 @@ TestTest::TestTest() {}
 void TestTest::length_test()
 {
 
-    /// Почему не подходит макрос QCOMPARE?
     QVERIFY2(length_compare(length_of_segment(0, 0, 3, 4), 5), "Failure");
     QVERIFY2(length_compare(length_of_segment(30, 20, 1, 1), 34.66987), "Failure");
     QVERIFY2(length_compare(length_of_segment(16, 16, -4, -10), 32.80244), "Failure");

@@ -15,7 +15,7 @@ int main()
         for (j = 0; j < m; j++)
             arr.set(i, j, i * j);
     arr.print();
-    arr2 = arr.copy();
+    arr2 = arr.sum(arr);
     arr2.print();
     return 0;
 }

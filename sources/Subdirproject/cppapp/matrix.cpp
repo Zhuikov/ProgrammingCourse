@@ -13,8 +13,26 @@ Matrix::Matrix(int a, int b)
     for (int i = 0; i < n; ++i){
         matrix[i] = new int[m];
     }
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            matrix[i][j] = 0;
    cout << "Constructor" << endl;
 }
+Matrix::Matrix(const Matrix& ptr)
+{
+    n = ptr.n;
+    m = ptr.m;
+    cout << "Copy constructor" << endl;
+    matrix = new int*[n];
+    for (int i = 0; i < n; i++){
+        matrix[i] = new int[m];
+    }
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            matrix[i][j] = ptr.matrix[i][j];
+}
+
 void Matrix::print()
 {
     for (int i = 0; i < n; ++i) {
@@ -34,27 +52,25 @@ int Matrix::get(int i, int j)
         else cout << "Error!" << endl;
     return 0;
 }
-Matrix Matrix::copy()
+
+Matrix Matrix::sum(Matrix arr)
 {
     Matrix array(n, m);
     for (int i = 0; i < n; i++)
-            for (int j = 0; j < m; j++)
-                array.set(i, j, matrix[i][j]);
+        for (int j = 0; j < m; j++)
+            array.matrix[i][j] = matrix[i][j] + arr.matrix[i][j];
+    cout << "Sum"  << endl;
     return array;
 }
-//Matrix Matrix::sum(Matrix* arr)
-//{
-//    for (int i = 0; i < n; i++)
-//        for (int j = 0; j < m; j++)
-//            matrix[i][j] = matrix[i][j] + arr->get(i, j);
-//    cout << "Sum"  << endl;
-//    return Matrix(n, m);
-//}
-//Matrix Matrix::subtraction(Matrix*)
-//{
-//    cout << "Subtraction" << endl;
-//    return Matrix(n, m);
-//}
+Matrix Matrix::subtraction(Matrix* arr)
+{
+    Matrix array(n, m);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            array.set(i, j, matrix[i][j] - arr->get(i, j));
+    cout << "Subtraction" << endl;
+    return array;
+}
 //Matrix Matrix::multiplication(Matrix*)
 //{
 //    cout << "Multiplication" << endl;
