@@ -4,11 +4,8 @@
 
 using namespace std;
 
-Matrix::Matrix(int a, int b)
+Matrix::Matrix(int a, int b): n(a), m(b)
 {
-    n = a;
-    m = b;
-
     matrix = new int*[n];
     for (int i = 0; i < n; ++i){
         matrix[i] = new int[m];
@@ -18,10 +15,9 @@ Matrix::Matrix(int a, int b)
             matrix[i][j] = 0;
    cout << "Constructor" << endl;
 }
-Matrix::Matrix(const Matrix& ptr)
+
+Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
 {
-    n = ptr.n;
-    m = ptr.m;
     cout << "Copy constructor" << endl;
     matrix = new int*[n];
     for (int i = 0; i < n; i++){
@@ -31,6 +27,16 @@ Matrix::Matrix(const Matrix& ptr)
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
             matrix[i][j] = ptr.matrix[i][j];
+}
+
+Matrix Matrix::operator=(Matrix arr)
+{
+    n = arr.n;
+    m = arr.m;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            matrix[i][j] = arr.matrix[i][j];
+    return *this;
 }
 
 void Matrix::print()
@@ -46,13 +52,12 @@ void Matrix::set(int i, int j, int val)
     if ((i < n) && (j < m)) matrix[i][j] = val;
         else cout << "Error!" << endl;
 }
-int Matrix::get(int i, int j)
+int Matrix::get(int i, int j) const
 {
     if ((i < n) && (j < m)) return matrix[i][j];
         else cout << "Error!" << endl;
     return 0;
 }
-
 Matrix Matrix::sum(Matrix arr)
 {
     Matrix array(n, m);

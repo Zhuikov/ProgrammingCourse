@@ -8,7 +8,8 @@ public:
     Matrix(const Matrix&);
     void set(int, int, int);
     void print();
-    int get(int, int);
+    int get(int, int) const;
+    Matrix operator=(Matrix arr);
     Matrix copy();
     Matrix sum(Matrix arr);
     Matrix subtraction(Matrix* arr);
