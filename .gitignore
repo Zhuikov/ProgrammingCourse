@@ -1,1 +1,7 @@
-*.o
+build* 
+*.pro.user* 
+*.aux 
+*.log 
+*.synctex.gz 
+*.tdo 
+*.toc 
