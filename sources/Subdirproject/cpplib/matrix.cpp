@@ -9,11 +9,11 @@ Matrix::Matrix(int a, int b): n(a), m(b)
     matrix = new int*[n];
     for (int i = 0; i < n; ++i){
         matrix[i] = new int[m];
-    }
-    for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
             matrix[i][j] = 0;
-   cout << "Constructor" << endl;
+    }
+
+    cout << "Constructor" << endl;
 }
 
 Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
@@ -22,22 +22,41 @@ Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
     matrix = new int*[n];
     for (int i = 0; i < n; i++){
         matrix[i] = new int[m];
-    }
-
-    for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
             matrix[i][j] = ptr.matrix[i][j];
+    }
 }
 
-Matrix Matrix::operator=(Matrix arr)
+int Matrix::getNumOfCols()
 {
-    n = arr.n;
-    m = arr.m;
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++)
-            matrix[i][j] = arr.matrix[i][j];
+    return m;
+}
+
+int Matrix::getNumOfRows()
+{
+    return n;
+}
+
+Matrix &Matrix::operator=(const Matrix &arr)
+{
+    cout << "assignment operator" << endl;
+    if(this!=&arr){
+        cout<< "lets copy"<< endl;
+    }
     return *this;
 }
+
+//Matrix Matrix::operator=(Matrix arr)
+//{
+//    cout << "assignment operator" << endl;
+//    n = arr.n;
+//    m = arr.m;
+//    for (int i = 0; i < n; i++)
+//        for (int j = 0; j < m; j++)
+//            matrix[i][j] = arr.matrix[i][j];
+//    cout << "assignment operator ends" << endl;
+//    return *this;
+//}
 
 void Matrix::print()
 {
@@ -50,14 +69,16 @@ void Matrix::print()
 void Matrix::set(int i, int j, int val)
 {
     if ((i < n) && (j < m)) matrix[i][j] = val;
-        else cout << "Error!" << endl;
+    else cout << "Error!" << endl;
 }
 int Matrix::get(int i, int j) const
 {
     if ((i < n) && (j < m)) return matrix[i][j];
-        else cout << "Error!" << endl;
+    else cout << "Error!" << endl;
     return 0;
 }
+
+
 Matrix Matrix::sum(Matrix arr)
 {
     Matrix array(n, m);

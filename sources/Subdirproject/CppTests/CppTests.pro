@@ -1,14 +1,22 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2015-12-07T18:06:18
+#
+#-------------------------------------------------
+
+QT       += testlib
+
+QT       -= gui
+
+TARGET = tst_cppteststest
+CONFIG   += console
+CONFIG   -= app_bundle
+
 TEMPLATE = app
-CONFIG += console c++11
-CONFIG -= app_bundle
-CONFIG -= qt
 
-SOURCES += main.cpp \
-    matrixconsoleprinter.cpp
 
-HEADERS += \
-    matrixconsoleprinter.h
-
+SOURCES += tst_cppteststest.cpp
+DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../cpplib/release/ -lcpplib
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../cpplib/debug/ -lcpplib
