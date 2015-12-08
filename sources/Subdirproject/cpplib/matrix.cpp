@@ -27,36 +27,45 @@ Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
     }
 }
 
-int Matrix::getNumOfCols()
+int Matrix::getNumOfCols() const
 {
     return m;
 }
 
-int Matrix::getNumOfRows()
+int Matrix::getNumOfRows() const
 {
     return n;
 }
 
-Matrix &Matrix::operator=(const Matrix &arr)
+Matrix&Matrix::operator=(const Matrix &arr)
 {
     cout << "assignment operator" << endl;
-    if(this!=&arr){
+    if (this != &arr){
         cout<< "lets copy"<< endl;
+
+        for (int i = 0; i < this->getNumOfRows(); i++)
+            delete matrix[i];
+        delete matrix;
+
+        matrix = new int*[n];
+        for (int i = 0; i < n; i++)
+            matrix[i] = new int[m];
+
+        for (int i = 0; i < arr.getNumOfRows(); i++)
+            for (int j = 0; j < arr.getNumOfCols(); j++)
+                this->set(i, j, arr.get(i, j));
     }
     return *this;
 }
 
-//Matrix Matrix::operator=(Matrix arr)
-//{
-//    cout << "assignment operator" << endl;
-//    n = arr.n;
-//    m = arr.m;
-//    for (int i = 0; i < n; i++)
-//        for (int j = 0; j < m; j++)
-//            matrix[i][j] = arr.matrix[i][j];
-//    cout << "assignment operator ends" << endl;
-//    return *this;
-//}
+Matrix Matrix::operator+(Matrix a)
+{
+    Matrix result(a.getNumOfRows(), a.getNumOfCols());
+    for (int i = 0; i < result.getNumOfRows(); i++)
+        for (int j = 0; j < result.getNumOfCols(); j++)
+            result.set(i, j, a.get(i, j) + this->get(i, j));
+    return result;
+}
 
 void Matrix::print()
 {

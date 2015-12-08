@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    matrixconsoleprinter.cpp
+    matrixconsolehelper.cpp
 
 HEADERS += \
-    matrixconsoleprinter.h
+    matrixconsolehelper.h
 
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../cpplib/release/ -lcpplib

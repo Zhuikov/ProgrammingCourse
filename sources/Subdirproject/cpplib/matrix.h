@@ -6,13 +6,13 @@ class Matrix
 public:
     Matrix(int n = 5, int m = 5);
     Matrix(const Matrix&);
-    int getNumOfCols();
-    int getNumOfRows();
+    int getNumOfCols() const;
+    int getNumOfRows() const;
     void set(int, int, int);
     void print();
     int get(int, int) const;
     Matrix& operator=(const Matrix& arr);
-    Matrix copy();
+    Matrix operator+(Matrix a);
     Matrix sum(Matrix arr);
     Matrix subtraction(Matrix* arr);
 //    Matrix multiplication(Matrix*);
@@ -22,7 +22,7 @@ public:
 
 private:
     int ** matrix;
-    int n, m;
+    const int n, m;
 };
 
 #endif // MATRIX_H
