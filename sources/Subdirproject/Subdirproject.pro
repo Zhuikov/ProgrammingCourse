@@ -11,4 +11,5 @@ SUBDIRS += \
     test \
     cppapp \
     cpplib \
-    CppTests
+    CppTests \
+    CppTasksTests

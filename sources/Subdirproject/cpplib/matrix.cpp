@@ -1,8 +1,7 @@
 #include <iostream>
 #include <iomanip>
+#include "indexexception.h"
 #include "matrix.h"
-
-using namespace std;
 
 Matrix::Matrix(int a, int b): n(a), m(b)
 {
@@ -13,12 +12,12 @@ Matrix::Matrix(int a, int b): n(a), m(b)
             matrix[i][j] = 0;
     }
 
-    cout << "Constructor" << endl;
+    std::cout << "Constructor" << std::endl;
 }
 
 Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
 {
-    cout << "Copy constructor" << endl;
+    std::cout << "Copy constructor" << std::endl;
     matrix = new int*[n];
     for (int i = 0; i < n; i++){
         matrix[i] = new int[m];
@@ -39,26 +38,35 @@ int Matrix::getNumOfRows() const
 
 Matrix&Matrix::operator=(const Matrix &arr)
 {
-    cout << "assignment operator" << endl;
+    std::cout << "assignment operator" << std::endl;
     if (this != &arr){
-        cout<< "lets copy"<< endl;
+        int i, j;
+        std::cout<< "lets copy"<< std::endl;
 
-        for (int i = 0; i < this->getNumOfRows(); i++)
+        for (i = 0; i < this->getNumOfRows(); i++)
             delete matrix[i];
         delete matrix;
 
         matrix = new int*[n];
-        for (int i = 0; i < n; i++)
+        for (i = 0; i < n; i++)
             matrix[i] = new int[m];
 
-        for (int i = 0; i < arr.getNumOfRows(); i++)
-            for (int j = 0; j < arr.getNumOfCols(); j++)
+        try {
+        for (i = 0; i < arr.getNumOfRows(); i++)
+            for (j = 0; j < arr.getNumOfCols(); j++)
                 this->set(i, j, arr.get(i, j));
+        }
+        catch (IndexException* e) {
+            std::cout << "Элемента с индексом [" << i <<  "][" << j <<
+                    "] не существует." << std:: endl <<
+                         "Размер матрицы: ";
+            e->printBoundsMatrix(arr);
+        }
     }
     return *this;
 }
 
-Matrix Matrix::operator+(Matrix a)
+Matrix Matrix::operator+(const Matrix a)
 {
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
@@ -67,58 +75,28 @@ Matrix Matrix::operator+(Matrix a)
     return result;
 }
 
-void Matrix::print()
+Matrix Matrix::operator-(const Matrix a)
 {
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j)
-            cout << setw(3) << matrix[i][j] << " ";
-        cout << endl;
-    }
+    Matrix result(a.getNumOfRows(), a.getNumOfCols());
+    for (int i = 0; i < result.getNumOfRows(); i++)
+        for (int j; j < result.getNumOfCols(); j ++)
+            result.set(i, j, this->get(i, j) - a.get(i, j));
+    return result;
 }
+
 void Matrix::set(int i, int j, int val)
 {
     if ((i < n) && (j < m)) matrix[i][j] = val;
-    else cout << "Error!" << endl;
+    else std::cout << "Error!" << std::endl;
 }
+
 int Matrix::get(int i, int j) const
 {
-    if ((i < n) && (j < m)) return matrix[i][j];
-    else cout << "Error!" << endl;
-    return 0;
+    if (i < 0 || i > n || j < 0 || j > m)
+        throw new IndexException(i, j);
+    return matrix[i][j];
 }
 
-
-Matrix Matrix::sum(Matrix arr)
-{
-    Matrix array(n, m);
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++)
-            array.matrix[i][j] = matrix[i][j] + arr.matrix[i][j];
-    cout << "Sum"  << endl;
-    return array;
-}
-Matrix Matrix::subtraction(Matrix* arr)
-{
-    Matrix array(n, m);
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++)
-            array.set(i, j, matrix[i][j] - arr->get(i, j));
-    cout << "Subtraction" << endl;
-    return array;
-}
-//Matrix Matrix::multiplication(Matrix*)
-//{
-//    cout << "Multiplication" << endl;
-//    return Matrix(n, m);
-//}
-//Matrix Matrix::multiplication_on_number(int number)
-//{
-//    for (int i = 0; i < n; i++)
-//        for (int j = 0; j < m; j++)
-//            matrix[i][j] = matrix[i][j] * number;
-//    cout << "Multiplication on number" << endl;
-//    return Matrix(n, m);
-//}
 Matrix::~Matrix()
 {
     for (int i = 0; i < n; ++i){
@@ -126,5 +104,5 @@ Matrix::~Matrix()
     }
     delete[]matrix;
 
-    cout << "Destructor" << endl;
+    std::cout << "Destructor" << std::endl;
 }

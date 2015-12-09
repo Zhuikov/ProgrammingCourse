@@ -9,14 +9,10 @@ public:
     int getNumOfCols() const;
     int getNumOfRows() const;
     void set(int, int, int);
-    void print();
     int get(int, int) const;
     Matrix& operator=(const Matrix& arr);
-    Matrix operator+(Matrix a);
-    Matrix sum(Matrix arr);
-    Matrix subtraction(Matrix* arr);
-//    Matrix multiplication(Matrix*);
-//    Matrix multiplication_on_number(int number);
+    Matrix operator+(const Matrix a);
+    Matrix operator-(const Matrix a);
 
     ~Matrix();
 

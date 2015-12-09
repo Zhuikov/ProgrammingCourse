@@ -11,10 +11,14 @@ TEMPLATE = lib
 CONFIG += staticlib
 
 SOURCES += \
-    matrix.cpp
+    matrix.cpp \
+    indexexception.cpp \
+    1_length_of_segment.cpp
 
 HEADERS += \
-    matrix.h
+    matrix.h \
+    indexexception.h \
+    length_of_segment.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
