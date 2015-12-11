@@ -38,12 +38,10 @@ int Matrix::getNumOfRows() const
 
 Matrix&Matrix::operator=(const Matrix &arr)
 {
-    std::cout << "assignment operator" << std::endl;
     if (n != arr.getNumOfRows() || m != arr.getNumOfCols())
         throw new UnequalMatrix;
     if (this != &arr){
         int i, j;
-        std::cout<< "lets copy"<< std::endl;
 
         for (i = 0; i < this->getNumOfRows(); i++)
             delete matrix[i];
@@ -103,7 +101,7 @@ Matrix Matrix::operator*(const Matrix a)
 {
     if (m != a.getNumOfRows())
             throw new ImpossibleMultiplication;
-    Matrix result(a.getNumOfRows(), a.getNumOfCols());
+    Matrix result(this->getNumOfRows(), a.getNumOfCols());
     int element = 0;
     for (int i = 0; i < n; i++)
         for (int j = 0; j < a.getNumOfCols(); j++){
@@ -119,7 +117,7 @@ Matrix Matrix::operator*(const Matrix a)
 void Matrix::set(int i, int j, int val)
 {
     if (i < 0 || i > n || j < 0 || j > m)
-        throw new IndexException;
+        throw new IndexException(i, j);
     matrix[i][j] = val;
 }
 

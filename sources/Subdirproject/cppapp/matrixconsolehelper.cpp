@@ -10,7 +10,7 @@ void MatrixConsoleHelper::printMatrix(Matrix matrix)
 {
     for(int i = 0; i < matrix.getNumOfRows(); i++){
         for(int j = 0; j < matrix.getNumOfCols(); j++){
-            std::cout << std::setw(3) << matrix.get(i, j);
+            std::cout << std::setw(4) << matrix.get(i, j);
         }
         std::cout << std::endl;
     }
