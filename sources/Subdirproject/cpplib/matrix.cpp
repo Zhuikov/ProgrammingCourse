@@ -83,7 +83,7 @@ Matrix Matrix::operator-(const Matrix a)
             throw new UnequalMatrix;
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
-        for (int j; j < result.getNumOfCols(); j ++)
+        for (int j = 0; j < result.getNumOfCols(); j ++)
             result.set(i, j, this->get(i, j) - a.get(i, j));
     return result;
 }
