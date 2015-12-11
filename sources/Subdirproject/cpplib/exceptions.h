@@ -11,4 +11,21 @@ public:
     void printBoundsMatrix(Matrix matrix);
 };
 
+class UnequalMatrix
+{
+
+public:
+    UnequalMatrix();
+    void errorMessage();
+
+};
+
+class ImpossibleMultiplication
+{
+
+public:
+    ImpossibleMultiplication();
+    void errorMessage();
+};
+
 #endif // INDEXEXCEPTION_H

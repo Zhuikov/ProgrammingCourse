@@ -12,13 +12,13 @@ CONFIG += staticlib
 
 SOURCES += \
     matrix.cpp \
-    indexexception.cpp \
-    1_length_of_segment.cpp
+    1_length_of_segment.cpp \
+    exceptions.cpp
 
 HEADERS += \
     matrix.h \
-    indexexception.h \
-    length_of_segment.h
+    length_of_segment.h \
+    exceptions.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

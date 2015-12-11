@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "indexexception.h"
+#include "exceptions.h"
 #include "matrix.h"
 
 Matrix::Matrix(int a, int b): n(a), m(b)
@@ -12,12 +12,12 @@ Matrix::Matrix(int a, int b): n(a), m(b)
             matrix[i][j] = 0;
     }
 
-    std::cout << "Constructor" << std::endl;
+    //std::cout << "Constructor" << std::endl;
 }
 
 Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
 {
-    std::cout << "Copy constructor" << std::endl;
+    //std::cout << "Copy constructor" << std::endl;
     matrix = new int*[n];
     for (int i = 0; i < n; i++){
         matrix[i] = new int[m];
@@ -39,6 +39,8 @@ int Matrix::getNumOfRows() const
 Matrix&Matrix::operator=(const Matrix &arr)
 {
     std::cout << "assignment operator" << std::endl;
+    if (n != arr.getNumOfRows() || m != arr.getNumOfCols())
+        throw new UnequalMatrix;
     if (this != &arr){
         int i, j;
         std::cout<< "lets copy"<< std::endl;
@@ -68,6 +70,8 @@ Matrix&Matrix::operator=(const Matrix &arr)
 
 Matrix Matrix::operator+(const Matrix a)
 {
+    if (n != a.getNumOfRows() || m != a.getNumOfCols())
+            throw new UnequalMatrix;
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
         for (int j = 0; j < result.getNumOfCols(); j++)
@@ -77,6 +81,8 @@ Matrix Matrix::operator+(const Matrix a)
 
 Matrix Matrix::operator-(const Matrix a)
 {
+    if (n != a.getNumOfRows() || m != a.getNumOfCols())
+            throw new UnequalMatrix;
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
         for (int j; j < result.getNumOfCols(); j ++)
@@ -84,10 +90,37 @@ Matrix Matrix::operator-(const Matrix a)
     return result;
 }
 
+Matrix Matrix::operator*(const int number)
+{
+    Matrix result(n, m);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            result.set(i, j, matrix[i][j] * number);
+    return result;
+}
+
+Matrix Matrix::operator*(const Matrix a)
+{
+    if (m != a.getNumOfRows())
+            throw new ImpossibleMultiplication;
+    Matrix result(a.getNumOfRows(), a.getNumOfCols());
+    int element = 0;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < a.getNumOfCols(); j++){
+            for (int u = 0; u < m; u++)
+                element = element + (this->get(i, u) * a.get(u, j));
+            result.set(i, j, element);
+            element = 0;
+        }
+    return result;
+
+}
+
 void Matrix::set(int i, int j, int val)
 {
-    if ((i < n) && (j < m)) matrix[i][j] = val;
-    else std::cout << "Error!" << std::endl;
+    if (i < 0 || i > n || j < 0 || j > m)
+        throw new IndexException;
+    matrix[i][j] = val;
 }
 
 int Matrix::get(int i, int j) const
@@ -104,5 +137,5 @@ Matrix::~Matrix()
     }
     delete[]matrix;
 
-    std::cout << "Destructor" << std::endl;
+   // std::cout << "Destructor" << std::endl;
 }

@@ -3,7 +3,7 @@
 
 MatrixConsoleHelper::MatrixConsoleHelper()
 {
-    std::cout << "Constructor of ConsoleIO" << std::endl;
+ //   std::cout << "Constructor of ConsoleIO" << std::endl;
 }
 
 void MatrixConsoleHelper::printMatrix(Matrix matrix)
@@ -30,6 +30,6 @@ Matrix MatrixConsoleHelper::makeMatrix()
 
 MatrixConsoleHelper::~MatrixConsoleHelper()
 {
-    std::cout << "Destructor of consoleIO" << std::endl;
+  //  std::cout << "Destructor of consoleIO" << std::endl;
 }
 
