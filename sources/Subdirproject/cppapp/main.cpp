@@ -1,6 +1,7 @@
 #include "exceptions.h"
 #include "matrix.h"
 #include "matrixconsolehelper.h"
+#include "equation.h"
 #include <iostream>
 
 int main()
@@ -44,6 +45,13 @@ int main()
     catch (ImpossibleMultiplication* e){
         e->errorMessage();
     }
+
+    Equation eq2(2, -8, 0);
+    eq2.solveEquation();
+    std::cout << eq2.numOfsolutions;
+    for (int i = 0; i < eq2.numOfsolutions; i++)
+        std::cout << eq2.result[i] << " ";
+
 
 
     return 0;

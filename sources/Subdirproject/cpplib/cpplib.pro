@@ -13,12 +13,16 @@ CONFIG += staticlib
 SOURCES += \
     matrix.cpp \
     1_length_of_segment.cpp \
-    exceptions.cpp
+    exceptions.cpp \
+    2_equation.cpp \
+    3_kilometrestomiles.cpp
 
 HEADERS += \
     matrix.h \
     length_of_segment.h \
-    exceptions.h
+    exceptions.h \
+    equation.h \
+    kilometrestomiles.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

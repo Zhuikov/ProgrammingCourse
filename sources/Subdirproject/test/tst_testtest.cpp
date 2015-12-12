@@ -5,7 +5,7 @@
 #include "equation.h"
 
 
-int length_compare(double a, double res){
+int double_compare(double a, double res){
 
     if (fabs(a - res) < 10e-5) return 1;
     return 0;
@@ -40,9 +40,9 @@ TestTest::TestTest() {}
 void TestTest::length_test()
 {
 
-    QVERIFY2(length_compare(length_of_segment(0, 0, 3, 4), 5), "Failure");
-    QVERIFY2(length_compare(length_of_segment(30, 20, 1, 1), 34.66987), "Failure");
-    QVERIFY2(length_compare(length_of_segment(16, 16, -4, -10), 32.80244), "Failure");
+    QVERIFY2(double_compare(length_of_segment(0, 0, 3, 4), 5), "Failure");
+    QVERIFY2(double_compare(length_of_segment(30, 20, 1, 1), 34.66987), "Failure");
+    QVERIFY2(double_compare(length_of_segment(16, 16, -4, -10), 32.80244), "Failure");
 }
 
 void TestTest::equation_test()

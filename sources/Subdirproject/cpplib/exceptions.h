@@ -13,11 +13,9 @@ public:
 
 class UnequalMatrix
 {
-
 public:
     UnequalMatrix();
     void errorMessage();
-
 };
 
 class ImpossibleMultiplication
@@ -26,6 +24,24 @@ class ImpossibleMultiplication
 public:
     ImpossibleMultiplication();
     void errorMessage();
+};
+
+class NotBiquadratic
+{
+public:
+    NotBiquadratic();
+};
+
+class NoRow
+{
+public:
+    NoRow();
+};
+
+class NotNatural
+{
+public:
+    NotNatural();
 };
 
 #endif // INDEXEXCEPTION_H

@@ -31,3 +31,18 @@ void ImpossibleMultiplication::errorMessage()
 {
     std::cout << "Нельзя перемножить данные матрицы!" << std::endl;
 }
+
+NotBiquadratic::NotBiquadratic()
+{
+
+}
+
+NoRow::NoRow()
+{
+
+}
+
+NotNatural::NotNatural()
+{
+
+}
