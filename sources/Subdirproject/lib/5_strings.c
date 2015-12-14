@@ -20,7 +20,7 @@ int find_name(char name [40], struct Competitors* ptr){
 
 void find_results(int i, char name[40], int results[3]){
 
-    int j, u;
+    short int j, u;
     char res [6];
 
     for (j = 0; j < 3; ++j) {

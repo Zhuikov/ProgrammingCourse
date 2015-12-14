@@ -3,7 +3,7 @@
 #include "exceptions.h"
 
 
-KilometresToMiles::KilometresToMiles(double km): km(km),  mile(0.622), kilometer(1)
+KilometresToMiles::KilometresToMiles(double km): km(km),  mile(0.622), kilometer(1), lengthTable(0)
 {
     if (km <= 0) throw new NotNatural;
     m = 1;

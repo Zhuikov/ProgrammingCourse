@@ -7,6 +7,7 @@ Equation::Equation(int a, int b, int c): a(a), b(b), c(c), numOfsolutions(0)
     for(int i =0; i < 4; i++){
         solutions[i] = 0;
         existence[i] = 0;
+        result[i] = 0;
     }
     if (a == 0) throw new NotBiquadratic;
     discriminant = b * b - 4 * a * c;

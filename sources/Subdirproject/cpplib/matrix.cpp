@@ -45,9 +45,9 @@ Matrix&Matrix::operator=(const Matrix &arr)
 
         for (i = 0; i < this->getNumOfRows(); i++)
             delete matrix[i];
-        delete matrix;
+        delete this->matrix;
 
-        matrix = new int*[n];
+        this->matrix = new int*[n];
         for (i = 0; i < n; i++)
             matrix[i] = new int[m];
 
@@ -66,7 +66,7 @@ Matrix&Matrix::operator=(const Matrix &arr)
     return *this;
 }
 
-Matrix Matrix::operator+(const Matrix a)
+Matrix Matrix::operator+(const Matrix& a)
 {
     if (n != a.getNumOfRows() || m != a.getNumOfCols())
             throw new UnequalMatrix;
@@ -77,7 +77,7 @@ Matrix Matrix::operator+(const Matrix a)
     return result;
 }
 
-Matrix Matrix::operator-(const Matrix a)
+Matrix Matrix::operator-(const Matrix& a)
 {
     if (n != a.getNumOfRows() || m != a.getNumOfCols())
             throw new UnequalMatrix;
@@ -97,7 +97,7 @@ Matrix Matrix::operator*(const int number)
     return result;
 }
 
-Matrix Matrix::operator*(const Matrix a)
+Matrix Matrix::operator*(const Matrix& a)
 {
     if (m != a.getNumOfRows())
             throw new ImpossibleMultiplication;

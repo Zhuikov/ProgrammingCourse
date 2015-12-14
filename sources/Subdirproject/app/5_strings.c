@@ -8,7 +8,7 @@ void results_of_competition(){
     FILE* f;
     char str[40];
     int results [3];
-    int i, max;
+    short int i, max;
     struct Competitors{
         char name [40];
         int res;

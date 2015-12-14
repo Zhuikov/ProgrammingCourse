@@ -9,7 +9,7 @@ void solution_of_equation_ui(){
         int existence [4];
     };
 
-    int i;
+    short int i;
     struct Solutions_of_equation * f;
     struct Solutions_of_equation answer;
     f = &answer;

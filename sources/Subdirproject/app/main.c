@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
      printf("> ");
 
      int choice;
-     scanf("%d", &choice);
+     scanf("%5d", &choice);
      switch(choice){
         case 1: {
             length_of_segment_ui();

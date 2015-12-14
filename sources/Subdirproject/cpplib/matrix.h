@@ -11,10 +11,10 @@ public:
     void set(int, int, int);
     int get(int, int) const;
     Matrix& operator=(const Matrix& arr);
-    Matrix operator+(const Matrix a);
-    Matrix operator-(const Matrix a);
+    Matrix operator+(const Matrix& a);
+    Matrix operator-(const Matrix& a);
     Matrix operator*(const int);
-    Matrix operator*(const Matrix a);
+    Matrix operator*(const Matrix& a);
 
     ~Matrix();
 
