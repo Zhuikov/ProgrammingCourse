@@ -1,4 +1,4 @@
-﻿\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[OT1]{fontenc}
@@ -505,19 +505,11 @@ $matrix1 = \begin{pmatrix} 2 & 1 & 4 \\ 3 & 2 & 5 \end{pmatrix}$; $matrix5 = \be
 После умножения должна получиться матрица: $matrix4 = \begin{pmatrix} 25 & 7 & 6 \\ 32 & 10 & 12 \end{pmatrix}$ \\
 После проверки каждого элемента полученной матрицы, оказалось, что результат умножения оправдал наши ожидания.
 \end{enumerate}
-Параллельно в тестировании использовались методы set и get, а так же оператор присваивания. Они работают верно.
+Так же в тестировании использовались методы set и get, а так же оператор присваивания. Они работают верно.
 
 \subsection{Выводы}
-При решении задачи, я впервые столкнулся с объектно-ориентированным программированием, узнал, что такое класс, методы класса, какими бывают методы; научился перегружать операторы, возбуждать исключения. Получившийся класс МАТРИЦА содержит все требуемые в условии методы. Результаты их работы соответствуют ожидаемым. Можно сделать вывод, что задание выполнено верно.
-
-
-
-
-
-
-
-
-
+При решении задачи, я впервые столкнулся с объектно-ориентированным программированием, узнал, что такое класс, методы класса, какими бывают методы; научился перегружать операторы, возбуждать исключения. Получившийся класс МАТРИЦА содержит все требуемые в условии методы. Результаты их работы соответствуют ожидаемым. Можно сделать вывод, что задание выполнено верно. 
+\newpage
 
 \subsection*{Листинги}
 \subsubsection{Функция main}
@@ -525,7 +517,7 @@ $matrix1 = \begin{pmatrix} 2 & 1 & 4 \\ 3 & 2 & 5 \end{pmatrix}$; $matrix5 = \be
 {../sources/Subdirproject/app/main.c}
 \newpage
 
-\subsubsection{Задача 1}
+\subsubsection{Задача 1. Длина отрезка}
 \lstinputlisting[]
 {../sources/Subdirproject/app/1_length_of_segment_ui.c}
 
@@ -533,7 +525,7 @@ $matrix1 = \begin{pmatrix} 2 & 1 & 4 \\ 3 & 2 & 5 \end{pmatrix}$; $matrix5 = \be
 {../sources/Subdirproject/lib/1_length_of_segment.c}
 \newpage
 
-\subsubsection{Задача 2}
+\subsubsection{Задача 2. Биквадратное уравнение}
 \lstinputlisting[]
 {../sources/Subdirproject/app/2_equation_ui.c}
 
@@ -546,7 +538,7 @@ $matrix1 = \begin{pmatrix} 2 & 1 & 4 \\ 3 & 2 & 5 \end{pmatrix}$; $matrix5 = \be
 {../sources/Subdirproject/test/tst_testtest.cpp}
 \newpage
 
-\subsubsection{Задача 3}
+\subsubsection{Задача 3. Циклы}
 \lstinputlisting[]
 {../sources/Subdirproject/app/3_km_to_miles_ui.c}
 
@@ -554,15 +546,29 @@ $matrix1 = \begin{pmatrix} 2 & 1 & 4 \\ 3 & 2 & 5 \end{pmatrix}$; $matrix5 = \be
 {../sources/Subdirproject/lib/3_km_to_miles.c}
 \newpage
 
-\subsubsection{Задача 4}
+\subsubsection{Задача 4. Матрицы}
 \lstinputlisting[]
 {../sources/Subdirproject/app/4_matrix.c}
 \newpage
 
-\subsubsection{Задача 5}
+\subsubsection{Задача 5. Строки}
 \lstinputlisting[]
 {../sources/Subdirproject/app/5_strings.c}
 
 \lstinputlisting[]
 {../sources/Subdirproject/lib/5_strings.c}
+\newpage
+
+\subsubsection{Задача 6. Инкапсуляция. МАТРИЦА}
+\lstinputlisting[]
+{../sources/Subdirproject/cpplib/matrix.h}
+
+\lstinputlisting[]
+{../sources/Subdirproject/cpplib/matrix.cpp}
+\newpage
+
+\subsubsection{Тесты для МАТРИЦЫ}
+\lstinputlisting[]
+{../sources/Subdirproject/CppTests/tst_cppteststest.cpp}
+
 \end{document}

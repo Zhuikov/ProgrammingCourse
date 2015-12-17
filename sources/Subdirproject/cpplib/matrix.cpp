@@ -12,12 +12,10 @@ Matrix::Matrix(int a, int b): n(a), m(b)
             matrix[i][j] = 0;
     }
 
-    //std::cout << "Constructor" << std::endl;
 }
 
 Matrix::Matrix(const Matrix& ptr): n(ptr.n), m(ptr.m)
 {
-    //std::cout << "Copy constructor" << std::endl;
     matrix = new int*[n];
     for (int i = 0; i < n; i++){
         matrix[i] = new int[m];
@@ -135,5 +133,4 @@ Matrix::~Matrix()
     }
     delete[]matrix;
 
-   // std::cout << "Destructor" << std::endl;
 }

@@ -1,4 +1,4 @@
-#include <QString>                      /// Тесты для матрицы.
+#include <QString>                     
 #include <QtTest>
 #include "matrix.h"
 
