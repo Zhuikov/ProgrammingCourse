@@ -4,4 +4,4 @@ build*
 *.log 
 *.synctex.gz 
 *.tdo 
-*.toc 
+*.toc
