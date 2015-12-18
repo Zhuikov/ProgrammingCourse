@@ -15,10 +15,9 @@ int main()
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             arr2.set(i, j, (i + 1) * (j + 1));
-    std::cout << "матрица 1 (3x8)" << std::endl;
+    std::cout << "матрица 1 (" << arr.getNumOfRows() << "x" << arr.getNumOfCols() << ")"
+              << std::endl;
     matrixSlave.printMatrix(arr);
-    try {
-
     arr2 = arr;
     std::cout << "Матрица 2 (3x8) = матрица 1" << std::endl;
     matrixSlave.printMatrix(arr2);
@@ -38,13 +37,6 @@ int main()
     arr5 = arr * arr4;
     std::cout << "матрица5(3х2) = матрица1(3х8) * матрица4(8х2)" << std::endl;
     matrixSlave.printMatrix(arr5);
-    }
-    catch (UnequalMatrix* e){
-        e->errorMessage();
-    }
-    catch (ImpossibleMultiplication* e){
-        e->errorMessage();
-    }
 
     return 0;
 }
