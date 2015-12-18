@@ -9,6 +9,7 @@ class KilometresToMiles
     double kilometer;
     double m;
     int lengthTable;
+    /// не очень хорошо зашивать константы, причем две
     double miles[400];
     double kilometers[400];
 

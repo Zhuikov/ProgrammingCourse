@@ -9,10 +9,12 @@ void results_of_competition(){
     char str[40];
     int results [3];
     short int i, max;
-    struct Competitors{
-        char name [40];
-        int res;
-    };
+
+    /// Зачем оно здесь? есть ведь в хедере
+//    struct Competitors{
+ //       char name [40];
+//        int res;
+//    };
     struct Competitors participant, first, second, third;
 
     first.res = -1;
@@ -30,18 +32,7 @@ void results_of_competition(){
         }
         participant.res = max;
 
-        if (compare_structs(&participant, &first) == 1) {
-            assigment_of_structs(&second, &third);
-            assigment_of_structs(&first, &second);
-            assigment_of_structs(&participant, &first);
-        }
-        else if (compare_structs(&participant, &second) == 1) {
-                assigment_of_structs(&second, &third);
-                assigment_of_structs(&participant, &second);
-             }
-             else if (compare_structs(&participant, &third) == 1) {
-                      assigment_of_structs(&participant, &third);
-                  }
+        place_participants(first, third, second, participant);
     }
 
     fclose(f);

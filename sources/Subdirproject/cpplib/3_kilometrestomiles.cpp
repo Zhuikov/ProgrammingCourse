@@ -7,6 +7,7 @@ KilometresToMiles::KilometresToMiles(double km): km(km),  mile(0.622), kilometer
 {
     if (km <= 0) throw new NotNatural;
     m = 1;
+    /// снова 400, если уж константа, пусть будет объявлена как константа, чтобы, если захочу 500, можно было в одном месте поменять в коде
     for (int i = 0; i < 400; i++){  ///магические цифры - плохо, но тут только так; сложно предугадать,
                                  /// какой длины будет таблица для динамического выделения памяти
         miles[i] = 0;
@@ -41,6 +42,7 @@ void KilometresToMiles::getRow(int number, double arr[2])
     arr[1] = kilometers[number];
 }
 
+/// можно и без этого метода
 void KilometresToMiles::showTable()
 {
     std::cout << "Miles     " << "Kilometers" << std::endl;

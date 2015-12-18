@@ -38,14 +38,16 @@ void calculating_of_solutions(int a, int b, int D,
 
     if (x1_2 >= 0) {
         f->solutions[0] = sqrt(x1_2);
-        f->solutions[1] = -sqrt(x1_2);
         f->existence[0] = 1;
+
+        f->solutions[1] = -sqrt(x1_2);
         f->existence[1] = 1;
     }
     if (x2_2 >= 0) {
         f->solutions[2] = sqrt(x2_2);
-        f->solutions[3] = -sqrt(x2_2);
         f->existence[2] = 1;
+
+        f->solutions[3] = -sqrt(x2_2);
         f->existence[3] = 1;
     }
 

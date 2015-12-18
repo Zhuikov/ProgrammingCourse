@@ -2,6 +2,8 @@
 #include <QtTest>
 #include "matrix.h"
 
+/// Этот метод абсолютно не нужен
+/// это способ записать a==b в четыре строчки
 int compare(int a, int b){
     if (a == b) return 1;
     return 0;
@@ -22,6 +24,12 @@ CppTestsTest::CppTestsTest()
 {
 }
 
+/// Не надо лепить все тесты сразу в одном тестовом методе
+/// Делайте тестовый метод для каждого public метода (и перегруженного оператора) по отдельности
+/// тогда, если сломается умножение матриц, упадет только тестовый метод связанный с умножением,
+/// но будет понятно, что все остальное работает по-прежнему
+/// это поможет локализовать ошибку просто глядя на отчет о прохождении тестов
+/// а в текущем состоянии будет казаться, что вся матрица к чертям сломалась
 void CppTestsTest::matrix()
 {
     Matrix matrix1(2, 3), matrix2(2, 3), matrix3(2, 3);
@@ -30,7 +38,9 @@ void CppTestsTest::matrix()
     matrix2.set(0, 0, 3); matrix2.set(0, 1, 4); matrix2.set(0, 2, 3);
     matrix2.set(1, 0, 2); matrix2.set(1, 1, 7); matrix2.set(1, 2, 1);
 
-    QVERIFY2(compare(matrix1.getNumOfCols(), 3), "wrong NumOfCols");
+    /// Когда нужно сравнить два числа, причем не вещественных, макрос qcompare отлично справляется
+    /// Да тут везде нужен QCOMPARE
+    QCOMPARE(matrix1.getNumOfCols(), 3);
     QVERIFY2(compare(matrix1.getNumOfRows(), 2), "wrong NumOfRows");
 
     matrix3 = matrix1 + matrix2;

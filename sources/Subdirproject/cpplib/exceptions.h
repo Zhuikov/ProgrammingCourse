@@ -13,6 +13,7 @@ public:
 
 class UnequalMatrix
 {
+    /// можно ввести поля для хранения подробностей, какие именно паметры в них не равны, и как сделать чтобы были равны
 public:
     UnequalMatrix();
     void errorMessage();

@@ -3,6 +3,8 @@
 #include "stringsx.h"
 #include "strings.h"
 
+
+/// наверно, уместнее слово не find, a parse
 int find_name(char name [40], struct Competitors* ptr){
 
     int k, i;
@@ -18,6 +20,7 @@ int find_name(char name [40], struct Competitors* ptr){
     return i;
 }
 
+/// наверно, уместнее слово не find, a parse
 void find_results(int i, char name[40], int results[3]){
 
     short int j, u;
@@ -51,4 +54,21 @@ void assigment_of_structs(struct Competitors* k1,
     strcpy(k2->name, k1->name);
     k2->res = k1->res;
 
+}
+
+/// Вытащила в отдельную функцию, потому что кусок большой и не очень изящный
+void place_participants(struct Competitors first, struct Competitors second, struct Competitors third, struct Competitors participant)
+{
+    if (compare_structs(&participant, &first) == 1) {
+        assigment_of_structs(&second, &third);
+        assigment_of_structs(&first, &second);
+        assigment_of_structs(&participant, &first);
+    }
+    else if (compare_structs(&participant, &second) == 1) {
+            assigment_of_structs(&second, &third);
+            assigment_of_structs(&participant, &second);
+         }
+         else if (compare_structs(&participant, &third) == 1) {
+                  assigment_of_structs(&participant, &third);
+              }
 }

@@ -14,6 +14,7 @@ int calc_column(int line, int col, int **arr){
     return ans;
 }
 
+/// изменить матрицу, а выше ф-я поменять строку, хм... что же они должны делать???
 void change_matrix(){
 
     FILE *file_in, *file_out;
