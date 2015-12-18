@@ -5,7 +5,13 @@
 
 KilometresToMiles::KilometresToMiles(double km): km(km),  mile(0.622), kilometer(1), lengthTable(0)
 {
-    if (km <= 0) throw new NotNatural;
+    try {
+    if (km <= 0) throw NotNatural();
+    }
+    catch (NotNatural){
+        std::cout << "Число километров должно быть натуральным!" << std::endl;
+    }
+
     m = 1;
     /// снова 400, если уж константа, пусть будет объявлена как константа, чтобы, если захочу 500, можно было в одном месте поменять в коде
     for (int i = 0; i < 400; i++){  ///магические цифры - плохо, но тут только так; сложно предугадать,
@@ -37,7 +43,7 @@ void KilometresToMiles::makeTable()
 
 void KilometresToMiles::getRow(int number, double arr[2])
 {
-    if (number > lengthTable) throw new NoRow;
+    if (number > lengthTable) throw NoRow();
     arr[0] = miles[number];
     arr[1] = kilometers[number];
 }

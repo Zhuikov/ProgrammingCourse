@@ -1,6 +1,7 @@
 #include "exceptions.h"
 #include "equation.h"
 #include <math.h>
+#include <iostream>
 
 Equation::Equation(int a, int b, int c): a(a), b(b), c(c), numOfsolutions(0)
 {
@@ -9,7 +10,13 @@ Equation::Equation(int a, int b, int c): a(a), b(b), c(c), numOfsolutions(0)
         existence[i] = 0;
         result[i] = 0;
     }
-    if (a == 0) throw new NotBiquadratic;
+    try {
+    if (a == 0) throw NotBiquadratic();
+    }
+    catch (NotBiquadratic){
+        std::cout << "Уравнение не является биквадратным!" << std::endl;
+    }
+
     discriminant = b * b - 4 * a * c;
 }
 
@@ -56,5 +63,3 @@ void Equation::analysisSolutions()
             numOfsolutions++;
         }
 }
-
-
