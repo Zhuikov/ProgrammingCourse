@@ -9,7 +9,7 @@ class Point
 public:
     Point(int a = 0, int b = 0);
     Point(const Point&);
-    double length_of_segment(Point);
+    double length_of_segment(const Point);
     ~Point();
 };
 

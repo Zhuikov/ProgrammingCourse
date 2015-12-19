@@ -10,11 +10,6 @@ void results_of_competition(){
     int results [3];
     short int i, max;
 
-    /// Зачем оно здесь? есть ведь в хедере
-//    struct Competitors{
- //       char name [40];
-//        int res;
-//    };
     struct Competitors participant, first, second, third;
 
     first.res = -1;
@@ -23,8 +18,8 @@ void results_of_competition(){
     f = fopen("competition.txt", "r");
 
     while (fgets(str, 40, f) != NULL) {
-        i = find_name(str, &participant);
-        find_results(i, str, results);
+        i = parse_name(str, &participant);
+        parse_results(i, str, results);
 
         max = -1;
         for (i = 0; i < 3; ++i){

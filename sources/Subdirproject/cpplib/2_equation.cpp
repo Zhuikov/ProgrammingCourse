@@ -3,19 +3,15 @@
 #include <math.h>
 #include <iostream>
 
-Equation::Equation(int a, int b, int c): a(a), b(b), c(c), numOfsolutions(0)
+Equation::Equation(const int a, const int b, const int c): a(a), b(b), c(c), numOfSolutions(0)
 {
-    for(int i =0; i < 4; i++){
+    for(int i = 0; i < 4; i++){
         solutions[i] = 0;
         existence[i] = 0;
         result[i] = 0;
     }
-    try {
+
     if (a == 0) throw NotBiquadratic();
-    }
-    catch (NotBiquadratic){
-        std::cout << "Уравнение не является биквадратным!" << std::endl;
-    }
 
     discriminant = b * b - 4 * a * c;
 }
@@ -60,6 +56,15 @@ void Equation::analysisSolutions()
         if (existence[i] == 1){
             result[j] = solutions[i];
             j++;
-            numOfsolutions++;
+            numOfSolutions++;
         }
+}
+
+void Equation::getSolutions(double arr[5])
+{
+     for (int i = 0; i < 5; i ++)
+         arr[i] = 0;
+     arr[0] = numOfSolutions;
+     for (int i = 1; i <= numOfSolutions; i ++)
+         arr[i] = result[i - 1];
 }

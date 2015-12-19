@@ -4,7 +4,12 @@
 extern "C" {
 #endif
 
-double length_of_segment(int x1, int y1, int x2, int y2);
+struct Point {
+    int x;
+    int y;
+};
+
+double length_of_segment(struct Point a, struct Point b);
 
 #ifdef __cplusplus
 }

@@ -3,6 +3,7 @@
 #include <math.h>
 #include "length_of_segment.h"
 #include "equation.h"
+#include "stringsx.h"
 
 
 int double_compare(double a, double res){
@@ -21,6 +22,13 @@ int struct_equality(struct Solutions_of_equation *f, float arr[4]){
     return 1;
 }
 
+int compare_strings(char str1 [], char str2 [])
+{
+    for (int i = 0; i < (int)strlen(str1); i++)
+        if (str1[i] != str2[i]) return 0;
+    return 1;
+}
+
 
 class TestTest : public QObject
 {
@@ -32,6 +40,7 @@ public:
 private Q_SLOTS:
     void length_test();
     void equation_test();
+   // void string_test();
 
 };
 
@@ -39,10 +48,12 @@ TestTest::TestTest() {}
 
 void TestTest::length_test()
 {
-
-    QVERIFY2(double_compare(length_of_segment(0, 0, 3, 4), 5), "Failure");
-    QVERIFY2(double_compare(length_of_segment(30, 20, 1, 1), 34.66987), "Failure");
-    QVERIFY2(double_compare(length_of_segment(16, 16, -4, -10), 32.80244), "Failure");
+    Point A, B, C, D, E, F;
+    A.x = 0; A.y = 0; B.x = 3; B.y = 4; C.x = 30; C.y = 20;
+    D.x = 1; D.y = 1; E.x = 16; E.y = 16; F.x = -4; F.y = -10;
+    QVERIFY2(double_compare(length_of_segment(A, B), 5), "Length fail");
+    QVERIFY2(double_compare(length_of_segment(C, D), 34.66987), "Length fail");
+    QVERIFY2(double_compare(length_of_segment(E, F), 32.80244), "Length fail");
 }
 
 void TestTest::equation_test()
@@ -65,6 +76,21 @@ void TestTest::equation_test()
     QVERIFY2(struct_equality(a2, res2), "Failure");
     QVERIFY2(struct_equality(a3, res3), "Failure");
 }
+
+//void TestTest::string_test()
+//{
+//    struct Competitors comp;
+//    char str[24], name[12];
+//    int i, results[3];
+
+//    strcpy(str, "Ivanov D.L. 500 403 555");
+//    strcpy(name, "Ivanov D.L. ");
+//    i = parse_name(str, &comp);
+//    parse_results(i, str, results);
+
+//    QVERIFY2(compare_strings(comp.name, name), "Fail string name");
+
+//}
 
 QTEST_APPLESS_MAIN(TestTest)
 

@@ -8,14 +8,14 @@ class IndexException
     int j;
 public:
     IndexException(int i, int j);
-    void printBoundsMatrix(Matrix matrix);
 };
 
 class UnequalMatrix
 {
     /// можно ввести поля для хранения подробностей, какие именно паметры в них не равны, и как сделать чтобы были равны
+    char ch;
 public:
-    UnequalMatrix();
+    UnequalMatrix(Matrix a, Matrix b);
     void errorMessage();
 };
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.30)  17 DEC 2015 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.30)  19 DEC 2015 03:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,19 +1059,35 @@ ABD: EveryShipout initializing macros
 \c@lstlisting=\count159
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 166.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (./РћС‚С‡РµС‚.tdo<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 166.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+))
+\tf@tdo=\write4
+\openout4 = `РћС‚С‡РµС‚.tdo'.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 186
+.
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+Overfull \hbox (2.9785pt too wide) in paragraph at lines 186--189
+[]\T2A/cmtt/m/n/12 float length_of_segment(int a, int b, int c, int, d)\T2A/cmr
+/m/n/12 . Бу-дем вы-во-
+ []
+
 [1
 
 ]
@@ -1080,87 +1096,87 @@ Overfull \hbox (9.48322pt too wide) detected at line 210
 /m/n/12 62\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 26656\OML/cmm/m/it/12 :::
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 243--245
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
-[3]
-Overfull \hbox (4.09042pt too wide) in paragraph at lines 247--250
+
+Overfull \hbox (4.09042pt too wide) in paragraph at lines 251--254
 []\T2A/cmr/m/n/12 Функция void solution$[]$of$[]$equation$[]$ui() от-ве-ча-ет з
 а вза-и-мо-дей-ствие
  []
 
 
-Overfull \hbox (5.72514pt too wide) in paragraph at lines 247--250
+Overfull \hbox (5.72514pt too wide) in paragraph at lines 251--254
 \T2A/cmr/m/n/12 Введем функ-цию, вы-чис-ля-ю-щую дис-кри-ми-нант урав-не-ния: i
 nt sign_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
 
-Overfull \hbox (7.8142pt too wide) in paragraph at lines 250--252
+Overfull \hbox (7.8142pt too wide) in paragraph at lines 254--256
 []\T2A/cmr/m/n/12 Функция int solve$[]$the$[]$equation(int a, int b, int c, str
 uct Solutions$[]$of_
  []
 
 
-Overfull \hbox (16.52647pt too wide) in paragraph at lines 250--252
+Overfull \hbox (16.52647pt too wide) in paragraph at lines 254--256
 \T2A/cmr/m/n/12 функ-цию void calculating$[]$of$[]$solutions(int, int, int, str
 uct Solutions$[]$of_
  []
 
 
-Overfull \hbox (14.7318pt too wide) in paragraph at lines 252--254
+Overfull \hbox (14.7318pt too wide) in paragraph at lines 256--258
 []\T2A/cmr/m/n/12 Функция void calculating$[]$of$[]$solutions(int, int, int, st
 ruct Solutions$[]$of_
  []
 
 
-Overfull \hbox (11.10587pt too wide) in paragraph at lines 252--254
+Overfull \hbox (11.10587pt too wide) in paragraph at lines 256--258
 \T2A/cmr/m/n/12 ва-ет функ-цию void analysis$[]$of$[]$solutions(struct Solution
 s$[]$of$[]$equation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
-
-Overfull \hbox (17.45938pt too wide) in paragraph at lines 256--258
+[4]
+Overfull \hbox (17.45938pt too wide) in paragraph at lines 260--262
 \T2A/cmr/m/n/12 После ра-бо-ты всех функ-ций, мы вер-нем-ся в функ-цию solution
 $[]$of$[]$equation_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--264
+Underfull \hbox (badness 10000) in paragraph at lines 263--268
 
  []
 
-[4]
-Overfull \hbox (17.33565pt too wide) in paragraph at lines 268--280
+
+Overfull \hbox (17.33565pt too wide) in paragraph at lines 272--284
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--280
+Underfull \hbox (badness 10000) in paragraph at lines 272--284
 
  []
 
 [5]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--300
+Underfull \hbox (badness 10000) in paragraph at lines 294--304
 
  []
 
@@ -1171,131 +1187,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 290--300
 [9
 
 ] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
 [11]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+Underfull \hbox (badness 10000) in paragraph at lines 405--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
 [12
 
 ]
-Overfull \hbox (4.47647pt too wide) in paragraph at lines 414--421
+Overfull \hbox (4.47647pt too wide) in paragraph at lines 418--425
 \T2A/cmr/m/n/12 во-ла, ко-то-рый ис-поль-зу-ет-ся в даль-ней-шем в функ-ции voi
 d find$[]$results(int,
  []
 
 
-Overfull \hbox (2.45207pt too wide) in paragraph at lines 414--421
+Overfull \hbox (2.45207pt too wide) in paragraph at lines 418--425
 \T2A/cmr/m/n/12 чив-шем-ся мас-си-ве ре-зуль-та-тов спортс-ме-на и за-пи-шем ег
 о в participant.res.
  []
 
 
-Overfull \hbox (15.11295pt too wide) in paragraph at lines 414--421
+Overfull \hbox (15.11295pt too wide) in paragraph at lines 418--425
 \T2A/cmr/m/n/12 Теперь бу-дем по-оче-ред-но срав-ни-вать по-лу-чив-шу-ю-ся пе-р
 е-мен-ную participant
  []
 
 
-Overfull \hbox (22.09492pt too wide) in paragraph at lines 414--421
+Overfull \hbox (22.09492pt too wide) in paragraph at lines 418--425
 \T2A/cmr/m/n/12 compare$[]$structs(struct Competitors*, struct Competitors*) Ес
 -ли participant.res
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 430--449
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--455
+Underfull \hbox (badness 10000) in paragraph at lines 453--459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--455
+Underfull \hbox (badness 10000) in paragraph at lines 453--459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 [14] [15]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
 
-Overfull \hbox (6.30383pt too wide) in paragraph at lines 469--471
+Overfull \hbox (6.30383pt too wide) in paragraph at lines 473--475
 []\T2A/cmr/m/n/12 Для вы-пол-не-ния это-го за-да-ния, ис-поль-зу-ем объектно-ор
 иентированное
  []
 
+[16
 
-Overfull \hbox (19.18895pt too wide) in paragraph at lines 473--485
+]
+Overfull \hbox (19.18895pt too wide) in paragraph at lines 478--490
 \T2A/cmr/m/n/12 умно-же-ния про-ве-рим усло-вие, ко-то-рое поз-во-ля-ет умно-жи
 ть мат-ри-цу Matrix1
  []
 
 
-Overfull \hbox (1.20395pt too wide) in paragraph at lines 473--485
+Overfull \hbox (1.20395pt too wide) in paragraph at lines 478--490
 \T2A/cmr/m/n/12 Matrix1 на Matrix2. В про-тив-ном слу-чае воз-бу-дим ис-клю-че-
 ние Impossible-
  []
 
-[16
-
-] [17]
-Overfull \hbox (23.99178pt too wide) in paragraph at lines 493--500
+[17]
+Overfull \hbox (23.99178pt too wide) in paragraph at lines 498--505
 []\T2A/cmr/m/n/12 Тестирование сум-мы, раз-но-сти мат-риц, а так же ме-то-дов g
 etNumOfRows
  []
 
 
-Overfull \hbox (17.84743pt too wide) in paragraph at lines 493--500
+Overfull \hbox (17.84743pt too wide) in paragraph at lines 498--505
 \T2A/cmr/m/n/12 Метод getNumOfRows(matrix1) вер-нул 2, ме-тод getNumOfCols(matr
 ix2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--500
+Underfull \hbox (badness 10000) in paragraph at lines 498--505
 
  []
 
 [18]
-Overfull \hbox (26.79314pt too wide) in paragraph at lines 502--507
+Overfull \hbox (26.79314pt too wide) in paragraph at lines 507--512
 \T2A/cmr/m/n/12 После умно-же-ния долж-на по-лу-чить-ся мат-ри-ца: $\OML/cmm/m/
 it/12 matrix\OT1/cmr/m/n/12 4 = []$ 
  []
 
 
-Overfull \hbox (18.21416pt too wide) in paragraph at lines 511--512
+Overfull \hbox (18.21416pt too wide) in paragraph at lines 516--517
 []\T2A/cmr/m/n/12 При ре-ше-нии за-да-чи, я впер-вые столк-нул-ся с объектно-ор
 иентированным
  []
 
-[19]
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 517
-.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-(../sources/Subdirproject/app/main.c
+[19] (../sources/Subdirproject/app/main.c
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 11.
  [20]) [21]
@@ -1303,43 +1313,44 @@ LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <10> not available
 (../sources/Subdirproject/lib/1_length_of_segment.c) [22]
 (../sources/Subdirproject/app/2_equation_ui.c)
 (../sources/Subdirproject/lib/2_equation.c [23] [24]) [25]
-(../sources/Subdirproject/test/tst_testtest.cpp [26]) [27]
+(../sources/Subdirproject/test/tst_testtest.cpp [26] [27]) [28]
 (../sources/Subdirproject/app/3_km_to_miles_ui.c)
-(../sources/Subdirproject/lib/3_km_to_miles.c) [28]
-(../sources/Subdirproject/app/4_matrix.c [29]) [30]
-(../sources/Subdirproject/app/5_strings.c [31])
-(../sources/Subdirproject/lib/5_strings.c [32]) [33]
+(../sources/Subdirproject/lib/3_km_to_miles.c [29]) [30]
+(../sources/Subdirproject/app/4_matrix.c [31]) [32]
+(../sources/Subdirproject/app/5_strings.c)
+(../sources/Subdirproject/lib/5_strings.c [33] [34]) [35]
 (../sources/Subdirproject/cpplib/matrix.h)
-(../sources/Subdirproject/cpplib/matrix.cpp [34] [35] [36]) [37]
-(../sources/Subdirproject/CppTests/tst_cppteststest.cpp [38]) [39]
+(../sources/Subdirproject/cpplib/matrix.cpp [36] [37] [38]) [39]
+(../sources/Subdirproject/CppTests/tst_cppteststest.cpp [40] [41]) [42]
 (./РћС‚С‡РµС‚.aux) ) 
 Here is how much of TeX's memory you used:
- 17650 strings out of 494466
- 320169 string characters out of 6172530
- 562988 words of memory out of 5000000
- 20423 multiletter control sequences out of 15000+600000
- 22019 words of font info for 58 fonts, out of 8000000 for 9000
+ 17712 strings out of 494466
+ 321623 string characters out of 6172530
+ 577987 words of memory out of 5000000
+ 20480 multiletter control sequences out of 15000+600000
+ 22329 words of font info for 59 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,8n,104p,1105b,1770s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/latt1000.
-600pk> </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/
-user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk> </home/user/.texmf-va
-r/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/user/.texmf-var/fonts/pk/ljf
-our/lh/lh-t2a/labx1440.600pk> </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/
-labx1728.600pk> </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2488.600pk
+ 62i,8n,104p,2084b,1769s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lait1000.
+600pk> </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/latt1000.600pk> </home/
+user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/user/.texmf-va
+r/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk> </home/user/.texmf-var/fonts/pk/ljf
+our/lh/lh-t2a/latt1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/
+labx1440.600pk> </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk
 > </home/user/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk> </home/user/
-.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb>
-Output written on РћС‚С‡РµС‚.pdf (40 pages, 286062 bytes).
+.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk> </home/user/.texmf-var/fon
+ts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/l
+h/lh-t2a/labx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on РћС‚С‡РµС‚.pdf (44 pages, 334205 bytes).
 PDF statistics:
- 643 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+ 789 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

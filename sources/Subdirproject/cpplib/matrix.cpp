@@ -36,20 +36,14 @@ int Matrix::getNumOfRows() const
 
 Matrix&Matrix::operator=(const Matrix &arr)
 {
-    try {
-    if (n != arr.getNumOfRows() || m != arr.getNumOfCols())
-        throw UnequalMatrix();
-    }
-    catch (UnequalMatrix){
-        std::cout << "Размеры матриц неравны!" << std::endl;
-    }
+    if (n != arr.getNumOfRows() || m != arr.getNumOfCols()) throw UnequalMatrix(*this, arr);
 
     if (this != &arr){
         int i, j;
 
         for (i = 0; i < this->getNumOfRows(); i++)
-            /// семен-семеныч...
-            delete[] matrix[i];
+            /// семен-семеныч...?????????
+            delete[] this->matrix[i];
         delete[] this->matrix;
 
         this->matrix = new int*[n];
@@ -65,15 +59,9 @@ Matrix&Matrix::operator=(const Matrix &arr)
 
 Matrix Matrix::operator+(const Matrix& a)
 {
-    try {
-    if (n != a.getNumOfRows() || m != a.getNumOfCols())
-            throw UnequalMatrix();
-    }
-    /// Что же вы! не надо сразу кетчить! Пусть ловит тот, кто вызывал этот метод
-    /// и везде по тексту то же
-    catch (UnequalMatrix){
-        std::cout << "Размеры матриц неравны!" << std::endl;
-    }
+
+    if (n != a.getNumOfRows() || m != a.getNumOfCols()) throw UnequalMatrix(*this, a);
+
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
         for (int j = 0; j < result.getNumOfCols(); j++)
@@ -83,13 +71,7 @@ Matrix Matrix::operator+(const Matrix& a)
 
 Matrix Matrix::operator-(const Matrix& a)
 {
-    try {
-    if (n != a.getNumOfRows() || m != a.getNumOfCols())
-            throw UnequalMatrix();
-    }
-    catch (UnequalMatrix){
-        std::cout << "Размеры матриц неравны!" << std::endl;
-    }
+    if (n != a.getNumOfRows() || m != a.getNumOfCols()) throw UnequalMatrix(*this, a);
 
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
@@ -109,13 +91,7 @@ Matrix Matrix::operator*(const int number)
 
 Matrix Matrix::operator*(const Matrix& a)
 {
-    try {
-    if (m != a.getNumOfRows())
-            throw ImpossibleMultiplication();
-    }
-    catch (ImpossibleMultiplication){
-        std::cout << "Данные матрицы нельзя умножать" << std::endl;
-    }
+    if (m != a.getNumOfRows()) throw ImpossibleMultiplication();
 
     Matrix result(this->getNumOfRows(), a.getNumOfCols());
     int element = 0;
@@ -132,29 +108,13 @@ Matrix Matrix::operator*(const Matrix& a)
 
 void Matrix::set(int i, int j, int val)
 {
-    try {
-    if (i < 0 || i > n || j < 0 || j > m)
-        throw IndexException(i, j);
-    }
-    catch (IndexException){
-        std::cout << "Элемента с индексом [" << i << "][" << j << "] " <<
-                  "не существует" << std::endl;
-    }
-
+    if (i < 0 || i > n || j < 0 || j > m) throw IndexException(i, j);
     matrix[i][j] = val;
 }
 
 int Matrix::get(int i, int j) const
 {
-    try {
-    if (i < 0 || i > n || j < 0 || j > m)
-        throw IndexException(i, j);
-    }
-    catch (IndexException){
-        std::cout << "Элемента с индексом [" << i << "][" << j << "] " <<
-                  "не существует" << std::endl;
-    }
-
+    if (i < 0 || i > n || j < 0 || j > m) throw IndexException(i, j);
     return matrix[i][j];
 }
 

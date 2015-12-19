@@ -22,7 +22,7 @@ int main()
     fillByDefault(arr);
 
     fillByDefault(arr2);
-    \
+
     std::cout << "матрица 1 ("<< arr.getNumOfRows() << "x" << arr.getNumOfCols() << ")" << std::endl;
     matrixSlave.printMatrix(arr);
     try {

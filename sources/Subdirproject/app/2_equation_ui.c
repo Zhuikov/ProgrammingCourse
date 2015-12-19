@@ -4,14 +4,6 @@
 
 void solution_of_equation_ui(){
 
-    /// Зачем оно здесь? есть ведь в хедере
-//    struct Solutions_of_equation {
-//        double solutions [4];
-//        int existence [4];
-//    };
-
-
-
     struct Solutions_of_equation answer;
 
     puts("Решение биквадратного уравнения");

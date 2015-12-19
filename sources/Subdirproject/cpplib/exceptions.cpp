@@ -10,21 +10,17 @@ IndexException::IndexException(int i, int j): i(i), j(j)
 
 }
 
-void IndexException::printBoundsMatrix(Matrix matrix)
+UnequalMatrix::UnequalMatrix(Matrix a, Matrix b)
 {
-    /// Лучше бы они не печатали, а то вдруг не в консоль надо будет эти данные отправить
-    std::cout << matrix.getNumOfRows() << "x" << matrix.getNumOfCols();
-}
-
-UnequalMatrix::UnequalMatrix()
-{
-
+    if (a.getNumOfCols() != b.getNumOfCols()) ch = 'c';
+    if (a.getNumOfRows() != b.getNumOfRows()) ch = 'r';
+    if ((a.getNumOfCols() != b.getNumOfCols()) &&
+            a.getNumOfRows() != b.getNumOfRows()) ch = 'b'; /// b - both;
 }
 
 void UnequalMatrix::errorMessage()
 {
-    /// Лучше бы они не печатали, а то вдруг не в консоль надо будет эти данные отправить
-    std::cout << "Размеры матриц неравны!" << std::endl;
+
 }
 
 ImpossibleMultiplication::ImpossibleMultiplication()
@@ -34,8 +30,7 @@ ImpossibleMultiplication::ImpossibleMultiplication()
 
 void ImpossibleMultiplication::errorMessage()
 {
-    /// Лучше бы они не печатали, а то вдруг не в консоль надо будет эти данные отправить
-    std::cout << "Нельзя перемножить данные матрицы!" << std::endl;
+
 }
 
 NotBiquadratic::NotBiquadratic()

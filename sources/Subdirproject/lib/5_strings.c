@@ -3,9 +3,7 @@
 #include "stringsx.h"
 #include "strings.h"
 
-
-/// наверно, уместнее слово не find, a parse
-int find_name(char name [40], struct Competitors* ptr){
+int parse_name(char name [40], struct Competitors* ptr){
 
     int k, i;
     k = 0;
@@ -20,8 +18,7 @@ int find_name(char name [40], struct Competitors* ptr){
     return i;
 }
 
-/// наверно, уместнее слово не find, a parse
-void find_results(int i, char name[40], int results[3]){
+void parse_results(int i, char name[40], int results[3]){
 
     short int j, u;
     char res [6];
@@ -56,7 +53,6 @@ void assigment_of_structs(struct Competitors* k1,
 
 }
 
-/// Вытащила в отдельную функцию, потому что кусок большой и не очень изящный
 void place_participants(struct Competitors first, struct Competitors second, struct Competitors third, struct Competitors participant)
 {
     if (compare_structs(&participant, &first) == 1) {

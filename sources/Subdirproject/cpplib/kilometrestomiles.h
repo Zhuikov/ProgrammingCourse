@@ -8,15 +8,14 @@ class KilometresToMiles
     double mile;
     double kilometer;
     double m;
+    static const int tableSize = 400;
     int lengthTable;
-    /// не очень хорошо зашивать константы, причем две
-    double miles[400];
-    double kilometers[400];
+    double miles[tableSize];
+    double kilometers[tableSize];
 
 public:    
     KilometresToMiles(double km);
     void getRow(int number, double arr[2]);
-    void showTable();
     void makeTable();
 };
 

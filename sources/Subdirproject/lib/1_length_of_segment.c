@@ -1,12 +1,7 @@
 #include <math.h>
 #include "length_of_segment.h"
 
-double length_of_segment(int x1, int y1, int x2, int y2){
+double length_of_segment(struct Point a, struct Point b){
 
-    double a, b;
-
-    a = pow(x1 - x2, 2);
-    b = pow(y1 - y2, 2);
-
-    return (sqrt(a + b));
+    return sqrt(pow((a.x - b.x), 2) + pow((b.y - a.y), 2));
 }

@@ -4,7 +4,8 @@ app.depends = lib
 test.depends = lib
 
 cppapp.depends = cpplib
-# и тесты тоже зависят
+cpptaskstests.depends = cpplib
+cpptests.depends = cpplib
 
 SUBDIRS += \
     lib \
