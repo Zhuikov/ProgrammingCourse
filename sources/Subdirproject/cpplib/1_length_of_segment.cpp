@@ -15,7 +15,7 @@ Point::Point(const Point & ptr)
 
 }
 
-double Point::length_of_segment(const Point obj)
+double Point::length_of_segment(const Point &obj)
 {
     double length = 0;
     length = sqrt(pow(obj.x - x, 2) + pow(obj.y - y, 2));

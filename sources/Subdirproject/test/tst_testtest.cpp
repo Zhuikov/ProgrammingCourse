@@ -22,12 +22,12 @@ int struct_equality(struct Solutions_of_equation *f, float arr[4]){
     return 1;
 }
 
-int compare_strings(char str1 [], char str2 [])
-{
-    for (int i = 0; i < (int)strlen(str1); i++)
-        if (str1[i] != str2[i]) return 0;
-    return 1;
-}
+//int compare_strings(char str1 [], char str2 [])
+//{
+//    for (int i = 0; i < (int)strlen(str1); i++)
+//        if (str1[i] != str2[i]) return 0;
+//    return 1;
+//}
 
 
 class TestTest : public QObject

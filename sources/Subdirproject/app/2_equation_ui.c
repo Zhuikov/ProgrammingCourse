@@ -10,7 +10,7 @@ void solution_of_equation_ui(){
     puts("Введите коэффициенты и свободный член");
 
     int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
+    scanf("%50000d %50000d %50000d", &a, &b, &c);
     puts("Ответ:");
 
     if (solve_the_equation(a, b, c, &answer) == 0) {

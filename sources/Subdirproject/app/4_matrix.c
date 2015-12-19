@@ -20,12 +20,13 @@ int calc_column(int line, int col, int **arr){
 void change_matrix(){
 
     FILE *file_in, *file_out;
-    int m, n, i, j, pre_ans;
+    int m, n, i, j;
+    short int pre_ans;
     int ** arr;
 
     file_in = fopen("input.txt", "r");
 
-    fscanf(file_in, "%d %d", &m, &n);
+    fscanf(file_in, "%200d %200d", &m, &n);
     arr = malloc(m * sizeof(int *));
     for (i = 0; i < m; i++){
         arr[i] = malloc(n * sizeof(int));
@@ -33,7 +34,7 @@ void change_matrix(){
 
     for (i = 0; i < m; i++){
         for (j = 0; j < n; j++){
-            fscanf(file_in, "%d", &arr[i][j]);
+            fscanf(file_in, "%5000d", &arr[i][j]);
         }
     }
 
