@@ -4,7 +4,7 @@
 
 class KilometresToMiles
 {
-    double km;
+    const double km;
     double mile;
     double kilometer;
     double m;
@@ -15,8 +15,8 @@ class KilometresToMiles
 
 public:    
     /// Где const ключевые слова?? Можно же их поставить?
-    KilometresToMiles(double km);
-    void getRow(int number, double arr[2]);
+    KilometresToMiles(const double km);
+    void getRow(const int number, double arr[2]);
     void makeTable();
 };
 

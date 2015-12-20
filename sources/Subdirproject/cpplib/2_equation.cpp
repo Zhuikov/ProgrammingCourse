@@ -21,6 +21,40 @@ void Equation::solveEquation()
     if (discriminant >= 0) calculateSolutions();
 }
 
+int Equation::getNumOfSolutions()
+{
+    return numOfSolutions;
+}
+
+double Equation::getX1()
+{
+    if (existence[0] == 1) return solutions[0];
+    else throw NoSolution(numOfSolutions);
+    return 0;
+}
+
+double Equation::getX2()
+{
+    if (existence[1] == 1) return solutions[1];
+    else throw NoSolution(numOfSolutions);
+    return 0;
+}
+
+double Equation::getX3()
+{
+    if (existence[2] == 1) return solutions[2];
+    else throw NoSolution(numOfSolutions);
+    return 0;
+}
+
+double Equation::getX4()
+{
+    if (existence[3] == 1) return solutions[3];
+    else throw NoSolution(numOfSolutions);
+    return 0;
+}
+
+
 void Equation::calculateSolutions()
 {
     double x1_2, x2_2;
@@ -58,13 +92,4 @@ void Equation::analysisSolutions()
             j++;
             numOfSolutions++;
         }
-}
-
-void Equation::getSolutions(double arr[5])
-{
-     for (int i = 0; i < 5; i ++)
-         arr[i] = 0;
-     arr[0] = numOfSolutions;
-     for (int i = 1; i <= numOfSolutions; i ++)
-         arr[i] = result[i - 1];
 }

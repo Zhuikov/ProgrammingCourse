@@ -1,11 +1,7 @@
 #include "matrixconsolehelper.h"
 #include <iomanip>
 
-MatrixConsoleHelper::MatrixConsoleHelper()
-{
-}
-
-void MatrixConsoleHelper::printMatrix(Matrix matrix)
+void MatrixConsoleHelper::printMatrix(const Matrix matrix)
 {
     for(int i = 0; i < matrix.getNumOfRows(); i++){
         for(int j = 0; j < matrix.getNumOfCols(); j++){
@@ -26,8 +22,3 @@ Matrix MatrixConsoleHelper::makeMatrix()
 
     return arr;
 }
-
-MatrixConsoleHelper::~MatrixConsoleHelper()
-{
-}
-

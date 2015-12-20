@@ -27,9 +27,11 @@ public:
     /// В общем, с этими public полями вы нарушили инкапсуляцию   
     void solveEquation();
     /// Нет, я предлагаю методы get, я же подробно написала
-    void getSolutions(double array[5]);
-
-
+    int getNumOfSolutions();
+    double getX1();
+    double getX2();
+    double getX3();
+    double getX4();
 
 };
 

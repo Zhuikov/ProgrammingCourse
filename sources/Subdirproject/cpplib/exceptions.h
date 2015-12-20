@@ -21,28 +21,27 @@ public:
 
 class ImpossibleMultiplication
 {
-
 public:
-    ImpossibleMultiplication();
     void errorMessage();
 };
 
 class NotBiquadratic
 {
-public:
-    NotBiquadratic();
 };
 
 class NoRow
 {
-public:
-    NoRow();
 };
 
 class NotNatural
 {
+};
+
+class NoSolution
+{
+    const int num;
 public:
-    NotNatural();
+    NoSolution(const int num);
 };
 
 #endif // INDEXEXCEPTION_H

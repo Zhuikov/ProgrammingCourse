@@ -3,15 +3,14 @@
 
 class Point
 {
-    int x;
-    int y;
+    const int x;
+    const int y;
 
 public:
     /// Где const ключевые слова?? Можно же их поставить?
-    Point(int a = 0, int b = 0);
+    Point(const int a = 0, const int b = 0);
     Point(const Point&);
     double length_of_segment(const Point&);
-    ~Point();
 };
 
 #endif // LENGTH_OF_SEGMENT_H

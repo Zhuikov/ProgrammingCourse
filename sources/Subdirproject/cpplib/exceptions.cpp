@@ -11,6 +11,7 @@ IndexException::IndexException(int i, int j): i(i), j(j)
 }
 
 /// Это какой-то бред...
+/// ch - это поле, которое хранит подробности, какие параметры матриц не равны
 UnequalMatrix::UnequalMatrix(Matrix a, Matrix b)
 {
     if (a.getNumOfCols() != b.getNumOfCols()) ch = 'c';
@@ -24,28 +25,11 @@ void UnequalMatrix::errorMessage()
 {
 
 }
-
-ImpossibleMultiplication::ImpossibleMultiplication()
-{
-
-}
-
 void ImpossibleMultiplication::errorMessage()
 {
 
 }
 
-NotBiquadratic::NotBiquadratic()
+NoSolution::NoSolution(const int num): num(num)
 {
-
-}
-
-NoRow::NoRow()
-{
-
-}
-
-NotNatural::NotNatural()
-{
-
 }

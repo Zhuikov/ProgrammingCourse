@@ -3,7 +3,7 @@
 #include "exceptions.h"
 
 
-KilometresToMiles::KilometresToMiles(double km): km(km),  mile(0.622), kilometer(1), lengthTable(0)
+KilometresToMiles::KilometresToMiles(const double km): km(km),  mile(0.622), kilometer(1), lengthTable(0)
 {
     if (km <= 0) throw NotNatural();
 
@@ -36,7 +36,7 @@ void KilometresToMiles::makeTable()
     lengthTable = i;
 }
 
-void KilometresToMiles::getRow(int number, double arr[2])
+void KilometresToMiles::getRow(const int number, double arr[2])
 {
     if (number > lengthTable) throw NoRow();
     arr[0] = miles[number];

@@ -38,31 +38,26 @@ void TestsTest::length_test()
 void TestsTest::equation_test()
 {
     Equation eq1(1, -3, 2), eq2(2, -8, 0), eq3(1, 0, 0), eq4(6, 6, 6);
-    double arr[5], arr2[5], arr3[5], arr4[5];
 
     eq1.solveEquation();
-    eq1.getSolutions(arr);
-    QVERIFY2((int)arr[0] == 4, "wrong numOFsolutions eq1");
-    QVERIFY2(double_compare(arr[1], 1.41), "wrong solution eq1");
-    QVERIFY2(double_compare(arr[2], -1.41), "wrong solution eq1");
-    QVERIFY2(double_compare(arr[3], 1.00), "wrong solution eq1");
-    QVERIFY2(double_compare(arr[4], -1.00), "wrong solution eq1");
+    QVERIFY2(eq1.getNumOfSolutions() == 4, "wrong numOFsolutions eq1");
+    QVERIFY2(double_compare(eq1.getX1(), 1.41), "wrong solution eq1");
+    QVERIFY2(double_compare(eq1.getX2(), -1.41), "wrong solution eq1");
+    QVERIFY2(double_compare(eq1.getX3(), 1.00), "wrong solution eq1");
+    QVERIFY2(double_compare(eq1.getX4(), -1.00), "wrong solution eq1");
 
     eq2.solveEquation();
-    eq2.getSolutions(arr2);
-    QVERIFY2((int)arr2[0] == 3, "wrong numOfsolutions eq2");
-    QVERIFY2(double_compare(arr2[1], 2.00), "wrong solution eq2");
-    QVERIFY2(double_compare(arr2[2], -2.00), "wrong solution eq2");
-    QVERIFY2(double_compare(arr2[3], 0), "wrong solution eq2");
+    QVERIFY2(eq2.getNumOfSolutions() == 3, "wrong numOfsolutions eq2");
+    QVERIFY2(double_compare(eq2.getX1(), 2.00), "wrong solution eq2");
+    QVERIFY2(double_compare(eq2.getX2(), -2.00), "wrong solution eq2");
+    QVERIFY2(double_compare(eq2.getX3(), 0), "wrong solution eq2");
 
     eq3.solveEquation();
-    eq3.getSolutions(arr3);
-    QVERIFY2((int)arr3[0] == 1, "wrong numOfsolutions eq3");
-    QVERIFY2(double_compare(arr3[1], 0), "wrong solution eq3");
+    QVERIFY2(eq3.getNumOfSolutions() == 1, "wrong numOfsolutions eq3");
+    QVERIFY2(double_compare(eq3.getX1(), 0), "wrong solution eq3");
 
     eq4.solveEquation();
-    eq4.getSolutions(arr4);
-    QVERIFY2((int)arr4[0] == 0, "wrong numOfsolutions eq4");
+    QVERIFY2(eq4.getNumOfSolutions() == 0, "wrong numOfsolutions eq4");
 }
 
 void TestsTest::kilometres_to_miles_test()
