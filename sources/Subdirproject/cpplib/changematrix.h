@@ -1,3 +1,4 @@
+/// Тут что происходит?
 //#ifndef CHANGEMATRIX_H
 //#define CHANGEMATRIX_H
 //#include <stdlib.h>

@@ -6,10 +6,11 @@ class Matrix
 public:
     Matrix(int n = 5, int m = 5);
     Matrix(const Matrix&);
+    /// Вот тут хоть есть const, нет бы везде так!
     int getNumOfCols() const;
     int getNumOfRows() const;
-    void set(int, int, int);
-    int get(int, int) const;
+    void set(const int,const int, const int);
+    int get(const int, const int) const;
     Matrix& operator=(const Matrix& arr);
     Matrix operator+(const Matrix& a);
     Matrix operator-(const Matrix& a);

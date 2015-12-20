@@ -1,7 +1,7 @@
 #ifndef EQUATION_H
 #define EQUATION_H
 
-
+/// Где const ключевые слова?? Можно же их поставить?
 class Equation
 {
     const int a;
@@ -26,7 +26,10 @@ public:
     ///
     /// В общем, с этими public полями вы нарушили инкапсуляцию   
     void solveEquation();
+    /// Нет, я предлагаю методы get, я же подробно написала
     void getSolutions(double array[5]);
+
+
 
 };
 

@@ -14,6 +14,7 @@ class KilometresToMiles
     double kilometers[tableSize];
 
 public:    
+    /// Где const ключевые слова?? Можно же их поставить?
     KilometresToMiles(double km);
     void getRow(int number, double arr[2]);
     void makeTable();

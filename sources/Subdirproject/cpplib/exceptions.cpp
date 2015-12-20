@@ -10,6 +10,7 @@ IndexException::IndexException(int i, int j): i(i), j(j)
 
 }
 
+/// Это какой-то бред...
 UnequalMatrix::UnequalMatrix(Matrix a, Matrix b)
 {
     if (a.getNumOfCols() != b.getNumOfCols()) ch = 'c';
@@ -18,6 +19,7 @@ UnequalMatrix::UnequalMatrix(Matrix a, Matrix b)
             a.getNumOfRows() != b.getNumOfRows()) ch = 'b'; /// b - both;
 }
 
+/// Зачем эти пустые методы?
 void UnequalMatrix::errorMessage()
 {
 

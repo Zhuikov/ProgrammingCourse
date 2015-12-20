@@ -1,7 +1,7 @@
 #include <math.h>
 #include "length_of_segment.h"
 
-Point::Point(int a, int b)
+Point::Point(int a, int b) /// Здесь можно сделать список инициализации, вы же умеете
 {
     x = a;
     y = b;
@@ -22,6 +22,8 @@ double Point::length_of_segment(const Point &obj)
     return length;
 }
 
+
+/// Удалить такой деструктор, он не нужен
 Point::~Point()
 {
 

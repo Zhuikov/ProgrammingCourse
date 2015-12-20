@@ -7,6 +7,7 @@ class Point
     int y;
 
 public:
+    /// Где const ключевые слова?? Можно же их поставить?
     Point(int a = 0, int b = 0);
     Point(const Point&);
     double length_of_segment(const Point&);
