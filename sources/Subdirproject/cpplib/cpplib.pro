@@ -13,7 +13,6 @@ CONFIG += staticlib
 SOURCES += \
     matrix.cpp \
     1_length_of_segment.cpp \
-    exceptions.cpp \
     2_equation.cpp \
     3_kilometrestomiles.cpp
 

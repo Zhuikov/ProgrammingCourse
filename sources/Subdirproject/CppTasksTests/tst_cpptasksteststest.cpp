@@ -39,24 +39,20 @@ void TestsTest::equation_test()
 {
     Equation eq1(1, -3, 2), eq2(2, -8, 0), eq3(1, 0, 0), eq4(6, 6, 6);
 
-    eq1.solveEquation();
     QVERIFY2(eq1.getNumOfSolutions() == 4, "wrong numOFsolutions eq1");
     QVERIFY2(double_compare(eq1.getX1(), 1.41), "wrong solution eq1");
     QVERIFY2(double_compare(eq1.getX2(), -1.41), "wrong solution eq1");
     QVERIFY2(double_compare(eq1.getX3(), 1.00), "wrong solution eq1");
     QVERIFY2(double_compare(eq1.getX4(), -1.00), "wrong solution eq1");
 
-    eq2.solveEquation();
     QVERIFY2(eq2.getNumOfSolutions() == 3, "wrong numOfsolutions eq2");
     QVERIFY2(double_compare(eq2.getX1(), 2.00), "wrong solution eq2");
     QVERIFY2(double_compare(eq2.getX2(), -2.00), "wrong solution eq2");
     QVERIFY2(double_compare(eq2.getX3(), 0), "wrong solution eq2");
 
-    eq3.solveEquation();
     QVERIFY2(eq3.getNumOfSolutions() == 1, "wrong numOfsolutions eq3");
     QVERIFY2(double_compare(eq3.getX1(), 0), "wrong solution eq3");
 
-    eq4.solveEquation();
     QVERIFY2(eq4.getNumOfSolutions() == 0, "wrong numOfsolutions eq4");
 }
 

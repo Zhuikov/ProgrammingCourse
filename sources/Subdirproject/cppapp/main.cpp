@@ -52,10 +52,8 @@ int main()
         matrixSlave.printMatrix(arr5);
     }
     catch (UnequalMatrix& e){
-        e.errorMessage();
     }
     catch (ImpossibleMultiplication& e){
-        e.errorMessage();
     }
 
     return 0;

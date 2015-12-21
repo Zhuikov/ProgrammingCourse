@@ -36,7 +36,9 @@ int Matrix::getNumOfRows() const
 
 Matrix&Matrix::operator=(const Matrix &arr)
 {
-    if (n != arr.getNumOfRows() || m != arr.getNumOfCols()) throw UnequalMatrix(*this, arr);
+    if (n != arr.getNumOfRows() || m != arr.getNumOfCols())
+        throw UnequalMatrix(this->getNumOfRows(), this->getNumOfCols(),
+                            arr.getNumOfRows(), arr.getNumOfCols());
 
     if (this != &arr){
         int i, j;
@@ -60,7 +62,9 @@ Matrix&Matrix::operator=(const Matrix &arr)
 Matrix Matrix::operator+(const Matrix& a)
 {
 
-    if (n != a.getNumOfRows() || m != a.getNumOfCols()) throw UnequalMatrix(*this, a);
+    if (n != a.getNumOfRows() || m != a.getNumOfCols())
+        throw UnequalMatrix(this->getNumOfRows(), this->getNumOfCols(),
+                            a.getNumOfRows(), a.getNumOfCols());
 
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
@@ -71,7 +75,9 @@ Matrix Matrix::operator+(const Matrix& a)
 
 Matrix Matrix::operator-(const Matrix& a)
 {
-    if (n != a.getNumOfRows() || m != a.getNumOfCols()) throw UnequalMatrix(*this, a);
+    if (n != a.getNumOfRows() || m != a.getNumOfCols())
+        throw UnequalMatrix(this->getNumOfRows(), this->getNumOfCols(),
+                            a.getNumOfRows(), a.getNumOfCols());
 
     Matrix result(a.getNumOfRows(), a.getNumOfCols());
     for (int i = 0; i < result.getNumOfRows(); i++)
@@ -91,7 +97,8 @@ Matrix Matrix::operator*(const int number)
 
 Matrix Matrix::operator*(const Matrix& a)
 {
-    if (m != a.getNumOfRows()) throw ImpossibleMultiplication();
+    if (m != a.getNumOfRows())
+        throw ImpossibleMultiplication(this->getNumOfCols(), a.getNumOfRows());
 
     Matrix result(this->getNumOfRows(), a.getNumOfCols());
     int element = 0;

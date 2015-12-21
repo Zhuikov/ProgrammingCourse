@@ -4,25 +4,35 @@
 
 class IndexException
 {
-    int i;
-    int j;
+    const int i;
+    const int j;
 public:
-    IndexException(int i, int j);
+    IndexException(int i, int j): i(i), j(j){}
+
+    int getNumOfRow() { return i; }
+    int getNumOfCol() { return j; }
 };
 
 class UnequalMatrix
 {
-    /// можно ввести поля для хранения подробностей, какие именно паметры в них не равны, и как сделать чтобы были равны
-    char ch;
+    const int row1;
+    const int row2;
+    const int col1;
+    const int col2;
 public:
-    UnequalMatrix(Matrix a, Matrix b);
-    void errorMessage();
+    UnequalMatrix(int r1, int c1, int r2, int c2): row1(r1), row2(r2), col1(c1), col2(c2){}
+    int getRow1() { return row1; }
+    int getRow2() { return row2; }
+    int getCols1() { return col1; }
+    int getCols2() { return col2; }
 };
 
 class ImpossibleMultiplication
 {
+    const int col1;
+    const int row2;
 public:
-    void errorMessage();
+    ImpossibleMultiplication(int c1, int r2): col1(c1), row2(r2){}
 };
 
 class NotBiquadratic
@@ -41,7 +51,7 @@ class NoSolution
 {
     const int num;
 public:
-    NoSolution(const int num);
+    NoSolution(const int num): num(num){}
 };
 
 #endif // INDEXEXCEPTION_H
