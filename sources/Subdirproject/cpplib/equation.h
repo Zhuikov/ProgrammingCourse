@@ -1,7 +1,6 @@
-#ifndef EQUATION_H
+﻿#ifndef EQUATION_H
 #define EQUATION_H
 
-/// Где const ключевые слова?? Можно же их поставить?
 class Equation
 {
     const int a;

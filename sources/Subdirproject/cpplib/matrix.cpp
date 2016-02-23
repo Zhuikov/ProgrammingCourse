@@ -44,7 +44,6 @@ Matrix&Matrix::operator=(const Matrix &arr)
         int i, j;
 
         for (i = 0; i < this->getNumOfRows(); i++)
-            /// семен-семеныч...?????????
             delete[] this->matrix[i];
         delete[] this->matrix;
 

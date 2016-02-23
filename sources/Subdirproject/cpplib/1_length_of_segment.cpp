@@ -1,7 +1,7 @@
 #include <math.h>
 #include "length_of_segment.h"
 
-Point::Point(const int a, const int b): x(a), y(b) /// Здесь можно сделать список инициализации, вы же умеете
+Point::Point(const int a, const int b): x(a), y(b)
 {
 }
 

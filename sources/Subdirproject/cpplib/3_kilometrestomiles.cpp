@@ -8,9 +8,7 @@ KilometresToMiles::KilometresToMiles(const double km): km(km),  mile(0.622), kil
     if (km <= 0) throw NotNatural();
 
     m = 1;
-    /// снова 400, если уж константа, пусть будет объявлена как константа, чтобы, если захочу 500, можно было в одном месте поменять в коде
-    for (int i = 0; i < tableSize; i++){  ///магические цифры - плохо, но тут только так; сложно предугадать,
-                                 /// какой длины будет таблица для динамического выделения памяти
+    for (int i = 0; i < tableSize; i++){
         miles[i] = 0;
         kilometers[i] = 0;
     }

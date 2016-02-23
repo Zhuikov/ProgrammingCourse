@@ -13,8 +13,7 @@ class KilometresToMiles
     double miles[tableSize];
     double kilometers[tableSize];
 
-public:    
-    /// Где const ключевые слова?? Можно же их поставить?
+public:
     KilometresToMiles(const double km);
     void getRow(const int number, double arr[2]);
     void makeTable();
